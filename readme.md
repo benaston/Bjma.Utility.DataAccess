@@ -1,14 +1,5 @@
-NState
+Bjma.Utility.DataAccess
 =====
 
-Simple state machine for .NET.
+Simple data access related types
 
-Usage:
---------
-
-```C#
-
-
-	
-	
-```
