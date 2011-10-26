@@ -10,6 +10,7 @@
     public interface IAggregateRoot : ISerializable
     {
         string Id { get; set; } //was_id per CouchDb
+
         string Revision { get; set; } //was _rev per CouchDb
     }
 }

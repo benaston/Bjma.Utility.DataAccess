@@ -1,16 +1,23 @@
 ﻿namespace Bjma.Utility.DataAccess
 {
-    using System;
     using System.Collections.Generic;
 
-    public interface IRepository<T>
+    /// <summary>
+    /// Should we bother trying to expose 
+    /// full CRUD functoinality here?
+    /// </summary>
+    public interface IRepository<TItem, TItemId, in TQuery>
     {
-        T GetById(string id);
+        TItemId Add(TItem @object);
 
-        IEnumerable<T> GetByIds(IEnumerable<string> ids);
+        TItem GetById(TItemId id);
 
-        IEnumerable<T> GetByFreeText(string query, int pageSize, int startPage, int numberOfPages);
+        IEnumerable<TItem> GetByIds(IEnumerable<TItemId> ids);
 
-        Guid Save(T objectToSave);
+        IEnumerable<TItem> GetByQuery(TQuery query, int pageSize = 10, int startPage = 1, int numberOfPages = 1);
+
+        void Update(TItem @object);
+
+        TItemId Remove(IEnumerable<TItemId> id);
     }
 }
