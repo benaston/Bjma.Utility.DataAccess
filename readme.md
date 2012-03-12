@@ -1,10 +1,10 @@
 Bjma.Utility.DataAccess
-=====
+--------
 
 Simple data access related types.
 
 
 License & Copyright
-=====
+--------
 
-This software is released under the GNU Lesser GPL. It is Copyright 2012, Ben Aston. I may be contacted at ben@bj.ma.
+This software is released under the GNU Lesser GPL. It is Copyright 2011, Ben Aston. I may be contacted at ben@bj.ma.
